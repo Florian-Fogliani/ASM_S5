@@ -11,9 +11,10 @@ main:
 
 power:
     add $1, %r14
-    mov $2, %ax
+    mov $2, %rax
     mul %r13
+    mov %rax, %r13
 
-    cmp %r12, %r13
+    cmp %r12, %r14
     jne power
     ret
