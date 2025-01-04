@@ -30,3 +30,4 @@ get_cpu_vendor_id:
 	add rdi, 1
 	mov r8b, 0
 	mov [rdi], r8b
+	ret
