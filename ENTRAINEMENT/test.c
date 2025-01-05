@@ -7,6 +7,9 @@ extern int myadd(int a, int b);
 extern unsigned int fact(unsigned int n);
 unsigned long long myatoull(const char *s);
 void get_cpu_vendor_id(char id[]);
+extern char *my_strcpy(char *dest, const char *source);
+extern char *my_strcpy_rep(char *dest, const char *source);
+extern void my_pow(int n);
 
 int main()
 {
@@ -52,5 +55,15 @@ int main()
 	get_cpu_vendor_id(id);
 	printf("CPU Vendor ID %s \n", id);  
 
+	char *d = malloc(10);
+
+	d = my_strcpy(d, "CpyISGood");
+	printf("CpyISGood = %s\n", d);
+
+	d = malloc(10);
+
+	d = my_strcpy_rep(d, "CpyISGood");
+	printf("CpyISGood = %s\n", d);
+	my_pow(5);
 	return 0;
 }
